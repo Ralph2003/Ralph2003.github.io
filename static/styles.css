@@ -1,0 +1,231 @@
+body {
+    /* background-color: #f5f5f5; */
+    /* background-image: url("photos/ina_yakiniku_night_sky.png"); */
+    background-image: url("../photos/ina_yakiniku.jpg");
+    background-repeat: no-repeat;
+    background-position: 0% -5%;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+    color: #f5f5f5;
+    /* transition: ease- in 0.1s; */
+    /* padding: 20px; */
+}
+header {
+    /* background-color: #EAD2AB; */
+    background: rgba(234, 210, 171, 0.975);
+    padding: 20px;
+}
+
+footer {
+    /* background-color: #a9a9a9; */
+    /* background-color: #092c3e;; */
+    background-color: #EAD2AB;
+    color: grey;
+    padding: 10px 20px;
+    font-size: 0.7em;
+}
+/* NAVIGATION */
+.link {
+    text-decoration: none;
+}
+
+ul.nav {
+    display: flex;
+    list-style-type: none;
+    overflow: hidden;
+}
+ul.nav li {
+    margin-right: 10px;
+    color: black;
+    padding: 14px 16px;
+}
+ul.nav li a {
+    /* display: block; */
+    color: black;
+    text-decoration: none;
+}
+
+/* CHECKBOX */
+ul.nav li label{
+    display: flex;
+    gap: 10px;
+}
+ul.nav li input[type="checkbox"]
+{
+    -webkit-appearance: none;
+    visibility: hidden;
+    display: none;
+}
+.check
+{
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 20px;
+    background-color: #f5f5f5;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: ease-in 0.5s;
+    /* dark mode color ! background-color: #092c3e; */
+}
+input[type="checkbox"]:checked ~ .check
+{
+    background-color: black;
+}
+/* when checkbox is checked change footer background color to dark color */
+
+
+
+
+ul.nav li a:hover {
+    text-decoration-line: underline;
+}
+ul.nav li.page_title {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0px 10px 0px 0px;
+    text-decoration-line: underline;
+
+}
+
+.mobile-break {
+    display: none;
+}
+@media screen and (max-width: 630px) {
+    ul.nav {
+        /* justify-content: center; */
+        justify-content: space-around;
+        flex-direction: row;
+    }
+    .mobile-break {
+        width: 100%;
+        display: block;
+    }
+}
+
+
+
+/* CONTENT */
+
+section {
+    background-color: #f5f5f5;
+    color: black;
+    /* opacity: 0.5; */
+    background: rgba(255, 255, 255, 0.75);
+    padding: 20px;
+}
+section.introduction {
+    /* display: flex; */
+    text-align: center;
+}
+
+img.profile_pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    margin: 0 50px 10px 10px;
+    display: None;
+
+}
+
+
+/* CONTACT */
+@media screen and (max-width: 780px)
+{
+	#contact_section
+	{
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+	}
+}
+
+#contact_section .social_line
+{
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	gap: 20px;
+}
+
+#contact_section .social_link
+{
+	display: flex;
+    flex-direction: row;
+	-webkit-box-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	justify-content: center;
+	padding: 25px 10px 25px 25px;
+	border-radius: 20px;
+	background-color: white;
+	filter: drop-shadow(0px 0px 10px rgba(28, 28, 51, 0.2));
+	gap: 15px;
+	text-decoration: none;
+	transition: padding 0.5s ease-in-out;
+}
+
+#contact_section .social_link:hover
+{
+	padding-right: 25px;
+}
+
+#contact_section .social_link img
+{
+	width: 50px;
+
+}
+
+#contact_section .social_link .social_text
+{
+	overflow: hidden;
+	width: 0px;
+	transition: width 0.5s ease-in-out;
+}
+
+#contact_section .social_link:hover .social_text
+{
+	width: var(--size);
+}
+
+#contact_section .social_link .social_text
+{
+	font-size: 20px;
+	white-space: normal;
+    text-decoration: none;
+
+}
+#contact_section .social_link a
+{
+    display: flex;
+    flex-direction: row;
+	align-items: center;
+    justify-content: center;
+	text-decoration: none;
+    color: black;
+    gap: 15px;
+
+}
+
+
+
+/*
+@media screen and (max-width: 500px)
+{
+	#contact_section .social_link:hover
+	{
+		padding-right: 10px;
+	}
+
+	#contact_section .social_link:hover .social_text
+	{
+		width: 0px;
+	}
+} */
+
