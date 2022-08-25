@@ -125,7 +125,7 @@ img.profile_pic {
     height: 200px;
     border-radius: 100%;
     margin: 0 50px 10px 10px;
-    display: None;
+    /* display: None; */
 
 }
 
