@@ -34,14 +34,21 @@ let button = document.querySelector("#button");
 // add event listener to checkbox and change the header background color to black
 checkbox.addEventListener('change', function() {
     if (checkbox.checked) {
-        document.querySelector('header').style.background = 'rgba(9, 44, 62, 0.975)';
+        // change navi colors titles to white
         document.querySelector('ul.nav li').style.color = "white";
         for (let i = 0; i < document.querySelectorAll('ul.nav li a').length; i++) {
             document.querySelectorAll('ul.nav li a')[i].style.color = "white";
         }
+        // change general background color to black
         document.querySelector('body').style.backgroundImage = "url('photos/ina_yakiniku_night_sky.png')";
+        document.querySelector('header').style.background = 'rgba(9, 44, 62, 0.975)';
         document.querySelector('footer').style.background = 'rgba(9, 44, 62, 0.975)';
         document.querySelector('footer').style.color = 'white';
+        // projects part
+        for (let i = 0; i < document.querySelectorAll('#projects_list .project').length; i++) {
+            document.querySelectorAll('#projects_list .project_head')[i].style.background = 'black';
+            document.querySelectorAll('#projects_list .project')[i].style.color = "white";
+        }
 
     } else {
         document.querySelector('header').style.backgroundColor = 'rgba(234, 210, 171, 0.975)'
@@ -52,6 +59,10 @@ checkbox.addEventListener('change', function() {
         }
         document.querySelector('footer').style.background = 'rgba(234, 210, 171, 0.975)';
         document.querySelector('footer').style.color = 'grey';
+        for (let i = 0; i < document.querySelectorAll('#projects_list .project').length; i++) {
+            document.querySelectorAll('#projects_list .project_head')[i].style.background = '#efefef';
+            document.querySelectorAll('#projects_list .project')[i].style.color = 'black';
+        }
     }
 });
 // function eventHandler(event){
