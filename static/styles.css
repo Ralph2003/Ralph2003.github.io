@@ -257,13 +257,31 @@ img.profile_pic {
 }
 
 #projects_list .project .project_body {
-    background-image: url("/photos/harvard_classes.png");
-    background-size: contain;
+    background-size: 100%;
     position: absolute;
     color: white;
     height: 364px;
+    /* background-image: url("/photos/harvard_classes.png"); */
+
+    /* background-repeat: ; */
     /* padding-left: 30px; */
 }
+
+#projects_list .project .project_body.CS50 {
+    background-image: url("/photos/harvard_classes.png");
+}
+#projects_list .project .project_body.south_pole {
+    background-image: url("/photos_site/antarctica_pic.jpg"); 
+}
+#projects_list .project .project_body.south_pole2 {
+    background-image: url("/photos_site/antarctica_pic2.png");
+}
+#projects_list .project .project_body.japan {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-image: url("/photos_site/japan3.JPG");
+}
+
 
 #projects_list .project .project_body .project_description{
     margin: 20px;
