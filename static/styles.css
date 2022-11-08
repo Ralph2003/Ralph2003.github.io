@@ -133,7 +133,7 @@ section {
     height: 100%;
     width: 100%;
     /* background: rgba(#efefef, 0.8); */
-    background-color: rgba(var(--color-section), 0.8);
+    background-color: rgba(var(--color-section), 0.75);
     /* color: var(--color-text); */
     text-align: center;
     transition: 0.5s ease-in-out;
@@ -266,6 +266,16 @@ img.profile_pic {
     position: absolute;
     width: 30%;
     left: 5%;
+}
+.project_head .japanese_flag {
+    position: absolute;
+    width: 10%;
+    left: 75%;
+}
+.project_head .ymca_logo {
+    position: absolute;
+    width: 20%;
+    left: 10%;
 }
 
 .project_head .languages_logos {
