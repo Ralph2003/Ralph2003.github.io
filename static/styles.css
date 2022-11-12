@@ -428,6 +428,7 @@ img.profile_pic.resume {
     .project_body {
         overflow:scroll;
         background-repeat: no-repeat;
+        background-color: #000000;
     }
     .resume_header {
         overflow: scroll;
