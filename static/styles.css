@@ -425,6 +425,9 @@ img.profile_pic.resume {
 
 @media screen and (max-width: 500px)
 {
+    h6 {
+        margin: 0 1.4em 0 1.4em;
+    }
     .project_body {
         overflow:scroll;
         background-repeat: no-repeat;
