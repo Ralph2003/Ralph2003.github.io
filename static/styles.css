@@ -426,8 +426,12 @@ img.profile_pic.resume {
 @media screen and (max-width: 500px)
 {
     .project_body {
-        overflow: scroll;
+        overflow:scroll;
         background-repeat: no-repeat;
+    }
+    .resume_header {
+        overflow: scroll;
+        align-items: flex-start;
     }
     img.profile_pic {
         width: 150px;
@@ -437,9 +441,8 @@ img.profile_pic.resume {
     span.resume_description {
         /* overflow:hidden; */
         margin-left: 150px;
-        overflow:scroll;
+        /* overflow:scroll; */
     }
-    
     .resume_column_one {
         width: 100%;
     }
