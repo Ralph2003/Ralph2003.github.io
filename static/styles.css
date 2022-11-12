@@ -42,6 +42,11 @@ footer {
     justify-content: flex-end;
 }
 
+span {
+    color: var(--color-text);
+    transition: ease-in-out 0.5s;
+}
+
 
 /* NAVIGATION */
 .link {
@@ -170,28 +175,23 @@ img.profile_pic {
 }
 #contact_section .social_line {
 	display: flex;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
 	align-items: center;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
 	justify-content: center;
 	gap: 20px;
 }
 #contact_section .social_link {
 	display: flex;
     flex-direction: row;
-	-webkit-box-align: center;
 	align-items: center;
-	-webkit-box-pack: center;
 	justify-content: center;
 	padding: 25px 10px 25px 25px;
 	border-radius: 20px;
-    background-color: rgba(var(--color-section));
+    background-color: var(--background-color);
 	filter: drop-shadow(0px 0px 10px rgba(28, 28, 51, 0.2));
 	gap: 15px;
 	text-decoration: none;
 	transition: padding 0.5s ease-in-out;
+    
 }
 #contact_section .social_link:hover {
 	padding-right: 25px;
@@ -209,6 +209,8 @@ img.profile_pic {
     font-size: 20px;
 	white-space: normal;
     text-decoration: none;
+    text-align: left;
+
 }
 #contact_section .social_link  .social_text span {
     color: var(--color-text);
@@ -229,16 +231,25 @@ img.profile_pic {
 
 }
 
+
 /* PROJECTS */
 
-#projects_list {
+.project_tag {
+    background-color: rgba(var(--color-section), 0.75);
+    color: var(--color-text);
+    text-align: center;
+    transition: 0.5s ease-in-out;
+    padding: 20px;
+}
+
+.projects_list {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;    
     flex-wrap: wrap;
 }
 
-#projects_list .project {
+ .project {
     /* padding: 220px 315px 220px 315px; */
     border-radius: 5px;
     width: 630px;
@@ -251,7 +262,7 @@ img.profile_pic {
     
 
 }
-#projects_list .project .project_head {
+ .project .project_head {
     /* background-image: url("/photos/Harvard_University_logo.svg.png");
     background-size: 30%;
     background-repeat: no-repeat; */
@@ -261,6 +272,7 @@ img.profile_pic {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 0.25s ease-in-out;
 }
 .project_head .harvard_logo {
     position: absolute;
@@ -269,8 +281,10 @@ img.profile_pic {
 }
 .project_head .japanese_flag {
     position: absolute;
-    width: 10%;
-    left: 75%;
+    width: 3.5%;
+    right: 0.8%;
+    top: 58px;
+    /* display: none; */
 }
 .project_head .ymca_logo {
     position: absolute;
@@ -290,51 +304,146 @@ img.profile_pic {
     /* margin: 5px; */
 }
 
+.project_head .project_date {
+    position: absolute;
+    right: 1%;
+    top: 5px;
+    font-weight: 500;
+    color: var(--color-text);
+    font-size: 14px;
+}
 
-#projects_list .project .project_head .project_title {
+
+ .project .project_head .project_title {
     font-size: 28px;
     font-weight: bold;
+    transition: 0.5s ease-in-out;
 
     /* padding: 20px; */
     /* position: relative; */
 }
 
-#projects_list .project .project_body {
+.project .project_body {
     background-size: 100%;
     position: absolute;
     color: white;
     background-color: rgba(var(--color-section));
     height: 364px;
+    background-image: var(--bg_image);
     /* background-image: url("/photos/harvard_classes.png"); */
 
     /* background-repeat: ; */
     /* padding-left: 30px; */
 }
 
-#projects_list .project .project_body.CS50 {
+.project .project_body.CS50 {
     background-image: url("/photos/harvard_classes.png");
 }
-#projects_list .project .project_body.south_pole {
+.project .project_body.south_pole {
     background-image: url("/photos_site/antarctica_pic.jpg"); 
 }
-#projects_list .project .project_body.south_pole2 {
-    background-image: url("/photos_site/antarctica_pic2.png");
+.project .project_body.ppla {
+    background-image: url("/photos_site/plane_picture.jpg");
 }
-#projects_list .project .project_body.japan {
-    background-size: 100%;
-    background-repeat: no-repeat;
+.project .project_body.japan {
     background-image: url("/photos_site/japan3.JPG");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    
+}
+.project .project_body.personal_website {
+    background-image: url("/photos_site/website_photo.png");
+    width: 100%;
+    background-repeat: no-repeat;
+    /* background-size: 100%; */
 }
 
 
-#projects_list .project .project_body .project_description{
+.project .project_body .project_description{
     margin: 20px;
     font-family: "calibre_regular", sans-serif;
-    /* backdrop-filter: blur(5px); */
     text-align: left;
-    /* padding-left: 100px; */
-    /* position: relative; */
 }
+
+/* RESUME */
+
+.resume {
+    color:var(--color-text);
+    text-align: left;
+    /* background-color: rgba(var(--color-section), 0.75); */
+    transition: 0.5s ease-in-out;
+    padding: 20px;
+}
+.resume_header {
+    background-color: rgba(var(--color-section), 0.8);
+    height: 18em;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+.resume_description {
+    margin-left: 220px;
+}
+
+.resume_body {
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.resume_column_one {
+    background-color: rgba(var(--color-section), 0.75);
+    width: 49.3%;
+    margin-right: 0.2em;
+    display:flex;
+    flex-direction: column;
+    
+    
+}
+
+img.profile_pic.resume {
+    position:absolute;
+    left:1%;
+}
+
+.resume_column_two {
+    display:flex;
+    flex-direction: column;
+    width: 49.3%;
+    background-color: rgba(var(--color-section), 0.75);
+}
+
+
+
+
+@media screen and (max-width: 500px)
+{
+    .project_body {
+        overflow: scroll;
+        background-repeat: no-repeat;
+    }
+    img.profile_pic {
+        width: 150px;
+        height: 150px;
+        margin-left: 30px;
+    }
+    span.resume_description {
+        /* overflow:hidden; */
+        margin-left: 150px;
+        overflow:scroll;
+    }
+    
+    .resume_column_one {
+        width: 100%;
+    }
+    .resume_column_two {
+        width: 100%;
+    }
+}
+
+
+
+
+
 
 
 
