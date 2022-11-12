@@ -254,7 +254,7 @@ img.profile_pic {
     border-radius: 5px;
     width: 630px;
     height: 440px;
-    background-color: white;
+    background-color: var(--background-color);
     filter: drop-shadow(0px 0px 10px rgba(28, 28, 51, 0.2));
     overflow: hidden;
     margin: 20px;
@@ -327,6 +327,8 @@ img.profile_pic {
     background-size: 100%;
     position: absolute;
     color: white;
+    /* text-shadow: 1px 1px 1px black; */
+    text-overflow: clip;
     background-color: rgba(var(--color-section));
     height: 364px;
     background-image: var(--bg_image);
@@ -341,9 +343,13 @@ img.profile_pic {
 }
 .project .project_body.south_pole {
     background-image: url("/photos_site/antarctica_pic.jpg"); 
+    /* text-shadow: 1px 1px 1px black; */
+
 }
 .project .project_body.ppla {
     background-image: url("/photos_site/plane_picture.jpg");
+    /* text-shadow: 1px 1px 1px black; */
+
 }
 .project .project_body.japan {
     background-image: url("/photos_site/japan3.JPG");
@@ -355,6 +361,8 @@ img.profile_pic {
     background-image: url("/photos_site/website_photo.png");
     width: 100%;
     background-repeat: no-repeat;
+    text-shadow: 2px 1px 0.5px black;
+
     /* background-size: 100%; */
 }
 
